@@ -25,7 +25,7 @@ usage() {
  	echo "Modo de uso: "
 	echo " -t \"Api token aqui\""
 	echo " -m \"mensagem aqui\""
-	echo " -t \"titulo da mensagem aqui\""
+	echo " -title \"titulo da mensagem aqui\""
 	echo " -d \"device1,device2,device3\""
 	exit 1
 }
@@ -70,7 +70,7 @@ while [ $# -gt 0 ]; do
             fi
             message="$1"
         ;;
-        -t) # Titulo
+        "-title") # Titulo
             shift
             noarg "$1"
             if [ -z "$1" ]; then
